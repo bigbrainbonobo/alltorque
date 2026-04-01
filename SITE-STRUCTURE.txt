@@ -1,0 +1,104 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ALLTORQUE.XYZ - SITE STRUCTURE                            ║
+║                    North Geelong Diesel Website                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📄 HTML PAGES (Production Ready)
+────────────────────────────────────────────────────────────────────────────────
+  ✓ index.html          Homepage with all sections (hero, services, fleet, etc.)
+  ✓ services.html       Comprehensive service offerings
+  ✓ fleet.html          Fleet maintenance programs
+  ✓ parts.html          Parts sourcing and supply
+  ✓ about.html          Company story and workshop
+  ✓ contact.html        Contact form and information
+
+🎨 CSS ARCHITECTURE (Modular Design System)
+────────────────────────────────────────────────────────────────────────────────
+  css/00-reset.css          CSS reset & base styles
+  css/01-variables.css      Design tokens (colors, spacing, typography)
+  css/02-typography.css     Typography system (Space Grotesk + Inter)
+  css/03-layout.css         Grid, container, spacing utilities
+  css/04-components.css     Buttons, cards, nav, forms
+  css/05-sections.css       Hero, trust bar, fleet spotlight, footer
+  css/06-utilities.css      Helper classes
+  css/07-animations.css     Motion & scroll animations
+
+⚡ JAVASCRIPT (Motion & Interactions)
+────────────────────────────────────────────────────────────────────────────────
+  js/main.js               Mobile menu, scroll animations, parallax,
+                           number count-up, form handling, sticky nav
+
+🖼️  IMAGE ASSETS (Generated & Ready)
+────────────────────────────────────────────────────────────────────────────────
+  assets/hero-diesel-truck-dusk-primary.jpg        → Homepage hero
+  assets/services-workshop-bay-hoist.jpg           → Services page
+  assets/fleet-lineup-organized.jpg                → Fleet section
+  assets/about-workshop-facility-wide.jpg          → About page
+  assets/parts-inventory-organized.jpg             → Parts page
+  assets/contact-background-industrial-sunset.jpg  → Contact CTA backgrounds
+
+📚 DOCUMENTATION
+────────────────────────────────────────────────────────────────────────────────
+  README.md                     Project overview & TODO list
+  CLAUDE.md                     Infrastructure & deployment info
+  docs/DESIGN.md                Complete design system documentation
+  docs/motion-plan.md           Animation specifications
+  docs/site-plan.md             Site structure & content strategy
+  docs/stitch-homepage-directions.md  Design direction rationale
+  docs/nano-banana-prompts.md   Image generation prompts used
+
+🎯 KEY FEATURES IMPLEMENTED
+────────────────────────────────────────────────────────────────────────────────
+  ✓ Premium Industrial Aesthetic (Industrial Powerhouse direction)
+  ✓ Hero section with parallax background (desktop)
+  ✓ Animated trust bar with number count-up
+  ✓ Service cards with diagonal accent & hover effects
+  ✓ Fleet maintenance spotlight with split layout
+  ✓ Why choose us grid with icon animations
+  ✓ Contact CTA with background image
+  ✓ Sticky navigation with scroll effects
+  ✓ Mobile hamburger menu
+  ✓ Mobile sticky call button
+  ✓ Scroll-triggered animations (Intersection Observer)
+  ✓ Form components with validation states
+  ✓ Responsive design (mobile-first)
+  ✓ Reduced motion support (accessibility)
+  ✓ Semantic HTML & ARIA labels
+
+🔧 WHAT NEEDS TO BE DONE (See README.md for details)
+────────────────────────────────────────────────────────────────────────────────
+  ⚠️  Replace placeholder phone number: (03) 5272 1234
+  ⚠️  Replace placeholder address: 123 Workshop Road
+  ⚠️  Verify operating hours
+  ⚠️  Add actual business story to About page
+  ⚠️  Add team photos and bios
+  ⚠️  Implement form submission backend
+  ⚠️  Add favicon and Open Graph meta tags
+  ⚠️  Add Google Analytics
+  ⚠️  Optimize images to WebP/AVIF
+  ⚠️  Add Google Maps to contact page
+  ⚠️  Add ABN, certifications, privacy policy links
+
+📦 DEPLOYMENT READY
+────────────────────────────────────────────────────────────────────────────────
+  Server:      10.0.0.4 (Nginx)
+  Path:        /var/www/sites/alltorque/
+  Domain:      alltorque.xyz
+  SSL:         Via NPM (Let's Encrypt)
+  Cloudflare:  DNS + proxy protection
+
+  Deploy command:
+  $ scp -r /home/mark/web/alltorque/* mark@10.0.0.4:/var/www/sites/alltorque/
+
+✨ DESIGN CREDITS
+────────────────────────────────────────────────────────────────────────────────
+  Direction:    Industrial Powerhouse (Premium Refinement)
+  Typography:   Space Grotesk + Inter (Google Fonts)
+  Color:        Oil-slick black + Hazard orange + High-contrast whites
+  Motion:       Cinematic scroll animations, parallax, count-up effects
+  Images:       Generated via Nano Banana Pro
+
+──────────────────────────────────────────────────────────────────────────────
+Status: Production-ready MVP with placeholder content
+Next: Replace TODO items with actual business information
+──────────────────────────────────────────────────────────────────────────────

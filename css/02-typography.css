@@ -1,0 +1,187 @@
+/* Typography System */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base Typography */
+body {
+  font: var(--text-body-md);
+  color: var(--color-white-primary);
+  letter-spacing: var(--ls-normal);
+}
+
+/* Display Text (Hero Headlines) */
+.text-display-xl {
+  font: var(--text-display-xl);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white-pure);
+}
+
+.text-display-lg {
+  font: var(--text-display-lg);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white-pure);
+}
+
+.text-display-md {
+  font: var(--text-display-md);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white-pure);
+}
+
+.text-display-sm {
+  font: var(--text-display-sm);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white-pure);
+}
+
+/* Headlines (Section Titles) */
+.text-headline-xl {
+  font: var(--text-headline-xl);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-white-pure);
+}
+
+.text-headline-lg {
+  font: var(--text-headline-lg);
+  letter-spacing: var(--ls-normal);
+  color: var(--color-white-pure);
+}
+
+.text-headline-md {
+  font: var(--text-headline-md);
+  letter-spacing: var(--ls-normal);
+  color: var(--color-white-pure);
+}
+
+.text-headline-sm {
+  font: var(--text-headline-sm);
+  letter-spacing: var(--ls-normal);
+  color: var(--color-white-pure);
+}
+
+/* Titles (Subsections) */
+.text-title-lg {
+  font: var(--text-title-lg);
+  color: var(--color-white-primary);
+}
+
+.text-title-md {
+  font: var(--text-title-md);
+  color: var(--color-white-primary);
+}
+
+.text-title-sm {
+  font: var(--text-title-sm);
+  color: var(--color-white-primary);
+}
+
+/* Body Text */
+.text-body-lg {
+  font: var(--text-body-lg);
+  color: var(--color-white-primary);
+}
+
+.text-body-md {
+  font: var(--text-body-md);
+  color: var(--color-white-primary);
+}
+
+.text-body-sm {
+  font: var(--text-body-sm);
+  color: var(--color-white-warm);
+}
+
+/* Labels (UI Elements) */
+.text-label-lg,
+.text-label-md,
+.text-label-sm {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+}
+
+.text-label-lg {
+  font: var(--text-label-lg);
+  color: var(--color-grey-light);
+}
+
+.text-label-md {
+  font: var(--text-label-md);
+  color: var(--color-grey-light);
+}
+
+.text-label-sm {
+  font: var(--text-label-sm);
+  color: var(--color-grey-light);
+}
+
+/* Data/Numbers */
+.text-data-xl,
+.text-data-lg,
+.text-data-md {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--ls-tight);
+}
+
+.text-data-xl {
+  font: var(--text-data-xl);
+  color: var(--color-orange-glow);
+}
+
+.text-data-lg {
+  font: var(--text-data-lg);
+  color: var(--color-orange-glow);
+}
+
+.text-data-md {
+  font: var(--text-data-md);
+  color: var(--color-orange-glow);
+}
+
+/* Color Utilities */
+.text-white { color: var(--color-white-pure); }
+.text-white-primary { color: var(--color-white-primary); }
+.text-white-warm { color: var(--color-white-warm); }
+.text-grey-light { color: var(--color-grey-light); }
+.text-grey-medium { color: var(--color-grey-medium); }
+.text-orange { color: var(--color-orange-primary); }
+.text-orange-glow { color: var(--color-orange-glow); }
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .text-display-xl {
+    font-size: 48px;
+  }
+
+  .text-display-lg {
+    font-size: 40px;
+  }
+
+  .text-display-md {
+    font-size: 36px;
+  }
+
+  .text-display-sm {
+    font-size: 32px;
+  }
+
+  .text-headline-xl {
+    font-size: 32px;
+  }
+
+  .text-headline-lg {
+    font-size: 28px;
+  }
+
+  .text-headline-md {
+    font-size: 24px;
+  }
+
+  .text-data-xl {
+    font-size: 48px;
+  }
+
+  .text-data-lg {
+    font-size: 36px;
+  }
+}
