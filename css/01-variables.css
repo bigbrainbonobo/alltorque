@@ -1,0 +1,141 @@
+/* Design System Variables - Industrial Powerhouse */
+
+:root {
+  /* ========== Colors - Foundation ========== */
+
+  /* Primary Black */
+  --color-black-pure: #000000;
+  --color-black-deep: #0a0a0a;
+  --color-black-oil: #0e0e0e;
+  --color-black-rich: #131313;
+
+  /* Surface Hierarchy (Tonal Depth) */
+  --surface-lowest: #000000;
+  --surface-low: #0e0e0e;
+  --surface-base: #131313;
+  --surface-raised: #1a1a1a;
+  --surface-elevated: #1f1f1f;
+  --surface-high: #262626;
+  --surface-highest: #2d2d2d;
+
+  /* Hazard Orange (Primary Accent) */
+  --color-orange-vivid: #ff6b00;
+  --color-orange-primary: #ff7524;
+  --color-orange-bright: #ff8c00;
+  --color-orange-glow: #ff9159;
+  --color-orange-soft: #ffa366;
+
+  /* Text on Orange */
+  --text-on-orange: #1a0800;
+  --text-on-orange-alt: #000000;
+
+  /* White & Grey (Text) */
+  --color-white-pure: #ffffff;
+  --color-white-primary: #f5f5f5;
+  --color-white-warm: #f0f0f0;
+  --color-grey-light: #d4d4d4;
+  --color-grey-medium: #a0a0a0;
+  --color-grey-dim: #808080;
+  --color-grey-dark: #5a5a5a;
+
+  /* Supporting Colors */
+  --color-concrete-light: #b8b8b8;
+  --color-concrete-base: #9e9e9e;
+  --color-concrete-dark: #757575;
+
+  --color-steel: #6b8ca3;
+  --color-steel-dim: #4a6b7c;
+
+  /* ========== Typography ========== */
+
+  /* Font Families */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Display (Hero Headlines) */
+  --text-display-xl: 900 72px/1.1 var(--font-display);
+  --text-display-lg: 900 64px/1.1 var(--font-display);
+  --text-display-md: 800 56px/1.15 var(--font-display);
+  --text-display-sm: 800 48px/1.15 var(--font-display);
+
+  /* Headline (Section Titles) */
+  --text-headline-xl: 700 40px/1.2 var(--font-display);
+  --text-headline-lg: 700 36px/1.25 var(--font-display);
+  --text-headline-md: 700 32px/1.3 var(--font-display);
+  --text-headline-sm: 600 28px/1.3 var(--font-display);
+
+  /* Title (Subsections) */
+  --text-title-lg: 600 24px/1.4 var(--font-body);
+  --text-title-md: 600 20px/1.4 var(--font-body);
+  --text-title-sm: 500 18px/1.4 var(--font-body);
+
+  /* Body Text */
+  --text-body-lg: 400 18px/1.6 var(--font-body);
+  --text-body-md: 400 16px/1.6 var(--font-body);
+  --text-body-sm: 400 14px/1.5 var(--font-body);
+
+  /* Label (UI Text) */
+  --text-label-lg: 600 16px/1.4 var(--font-body);
+  --text-label-md: 600 14px/1.4 var(--font-body);
+  --text-label-sm: 600 12px/1.3 var(--font-body);
+
+  /* Data/Numbers */
+  --text-data-xl: 900 64px/1.1 var(--font-display);
+  --text-data-lg: 800 48px/1.1 var(--font-display);
+  --text-data-md: 700 36px/1.2 var(--font-display);
+
+  /* Letter Spacing */
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+
+  /* ========== Spacing ========== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 64px;
+  --space-10: 80px;
+  --space-11: 96px;
+  --space-12: 120px;
+  --space-13: 160px;
+  --space-14: 200px;
+
+  /* ========== Breakpoints ========== */
+
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  /* ========== Transitions ========== */
+
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-base: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-cinematic: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ========== Shadows (Used Sparingly) ========== */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 6px 24px rgba(0, 0, 0, 0.5);
+  --shadow-orange: 0 4px 12px rgba(255, 117, 36, 0.3);
+  --shadow-orange-hover: 0 6px 24px rgba(255, 117, 36, 0.5);
+
+  /* ========== Z-Index Scale ========== */
+
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}

@@ -1,0 +1,218 @@
+/* Animation & Motion Styles */
+
+/* ========== Animation States ========== */
+
+/* Elements that animate on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Delays */
+.animate-on-scroll[data-stagger="0"] { transition-delay: 0s; }
+.animate-on-scroll[data-stagger="1"] { transition-delay: 0.12s; }
+.animate-on-scroll[data-stagger="2"] { transition-delay: 0.24s; }
+.animate-on-scroll[data-stagger="3"] { transition-delay: 0.36s; }
+.animate-on-scroll[data-stagger="4"] { transition-delay: 0.48s; }
+.animate-on-scroll[data-stagger="5"] { transition-delay: 0.6s; }
+
+/* ========== Hero Animations ========== */
+
+.hero--animate-in .hero__headline {
+  animation: fadeSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+}
+
+.hero--animate-in .hero__subheadline {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+.hero--animate-in .hero__cta-primary {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+}
+
+.hero--animate-in .hero__cta-secondary {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+.hero--animate-in .hero__scroll-indicator {
+  animation: fadeIn 0.5s ease-out 1.5s both;
+}
+
+.hero--animate-in .hero__background img {
+  animation: heroZoom 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+/* ========== CTA Pulse ========== */
+
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(255, 117, 36, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 117, 36, 0.5),
+                0 0 0 8px rgba(255, 117, 36, 0.1);
+  }
+}
+
+.hero__cta-primary {
+  animation: cta-pulse 4s ease-out 2s infinite;
+}
+
+/* ========== Mobile CTA Slide In ========== */
+
+.mobile-cta-sticky {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mobile-cta-sticky.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ========== Split Section Animations ========== */
+
+.split--animate-in .split__image {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.split--animate-in .split__content {
+  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== Icon Pop Animation ========== */
+
+.why-item__icon {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.why-item.is-visible .why-item__icon {
+  transform: scale(1);
+}
+
+/* ========== Image Hover Zoom ========== */
+
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== Reduced Motion Support ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable parallax */
+  .hero__background,
+  .parallax-element {
+    transform: none !important;
+  }
+
+  /* Disable CTA pulse */
+  .hero__cta-primary {
+    animation: none !important;
+  }
+}
+
+/* ========== Mobile Performance Optimizations ========== */
+
+@media (max-width: 768px) {
+  /* Disable parallax on mobile */
+  .hero__background {
+    transform: none !important;
+  }
+
+  /* Simplify card animations */
+  .card:hover {
+    transform: none;
+  }
+
+  /* Disable diagonal stripe animation */
+  .btn--primary::before {
+    display: none;
+  }
+}
+
+/* ========== Loading State ========== */
+
+.is-loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ========== Fade In Only (for dark sections) ========== */
+
+.fade-in-only {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-only.is-visible {
+  opacity: 1;
+}

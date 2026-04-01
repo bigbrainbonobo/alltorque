@@ -1,0 +1,377 @@
+/* Component Styles */
+
+/* ========== Buttons ========== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font: var(--text-label-lg);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  border-radius: 0;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+}
+
+/* Primary Button (Orange) */
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-orange-primary), var(--color-orange-bright));
+  color: var(--text-on-orange);
+  box-shadow: var(--shadow-orange);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-orange-hover);
+  background: linear-gradient(315deg, var(--color-orange-primary), var(--color-orange-bright));
+}
+
+.btn--primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Diagonal stripe animation on hover */
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 60%
+  );
+  transition: left 0.5s ease-out;
+}
+
+.btn--primary:hover::before {
+  left: 100%;
+}
+
+/* Secondary Button (Ghost) */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-white-pure);
+  border: 2px solid var(--color-white-pure);
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-orange-primary);
+  color: var(--color-orange-primary);
+}
+
+.btn--secondary:active {
+  background: rgba(255, 117, 36, 0.15);
+  transform: scale(0.98);
+}
+
+/* Tertiary Button (Text Only) */
+.btn--tertiary {
+  background: none;
+  color: var(--color-white-pure);
+  padding: 0;
+  gap: var(--space-2);
+}
+
+.btn--tertiary:hover {
+  color: var(--color-orange-primary);
+}
+
+.btn--tertiary::after {
+  content: '→';
+  transition: transform var(--transition-fast);
+}
+
+.btn--tertiary:hover::after {
+  transform: translateX(4px);
+}
+
+/* Button Sizes */
+.btn--lg {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+.btn--sm {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+/* ========== Cards ========== */
+
+.card {
+  background: var(--surface-raised);
+  padding: var(--space-7);
+  border-radius: 0;
+  border: none;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.card:hover {
+  background: var(--surface-elevated);
+  transform: translateY(-4px);
+}
+
+/* Diagonal Cut Accent */
+.card--accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 32px 32px 0;
+  border-color: transparent var(--color-orange-vivid) transparent transparent;
+  opacity: 0.6;
+  transition: opacity var(--transition-base);
+}
+
+.card--accent:hover::before {
+  opacity: 1;
+}
+
+/* Card Content */
+.card__icon {
+  font-size: 48px;
+  color: var(--color-orange-vivid);
+  margin-bottom: var(--space-4);
+  transition: all var(--transition-base);
+}
+
+.card:hover .card__icon {
+  color: var(--color-orange-bright);
+  transform: scale(1.08);
+}
+
+.card__title {
+  font: var(--text-headline-sm);
+  color: var(--color-white-pure);
+  margin-bottom: var(--space-3);
+}
+
+.card__description {
+  font: var(--text-body-md);
+  color: var(--color-white-warm);
+  margin-bottom: var(--space-5);
+}
+
+.card__link {
+  font: var(--text-label-md);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-orange-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.card__link::after {
+  content: '→';
+  transition: transform var(--transition-fast);
+}
+
+.card:hover .card__link::after {
+  transform: translateX(6px);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-5);
+  }
+}
+
+/* ========== Navigation ========== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-sticky);
+  transition: all var(--transition-base);
+}
+
+.nav--scrolled {
+  background: rgba(38, 38, 38, 0.9);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-8);
+}
+
+.nav__logo {
+  font: var(--text-headline-sm);
+  color: var(--color-white-pure);
+  font-weight: 900;
+  letter-spacing: var(--ls-tight);
+}
+
+.nav__menu {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.nav__link {
+  font: var(--text-label-md);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-white-primary);
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover {
+  color: var(--color-orange-primary);
+}
+
+.nav__link--active {
+  color: var(--color-orange-primary);
+}
+
+.nav__phone {
+  font: var(--text-label-lg);
+  color: var(--color-orange-primary);
+  font-weight: 700;
+}
+
+/* Mobile Menu Toggle */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--color-white-pure);
+  transition: all var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .nav__container {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--surface-highest);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-6);
+    transition: right var(--transition-base);
+  }
+
+  .nav__menu--open {
+    right: 0;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__phone {
+    display: none;
+  }
+}
+
+/* ========== Forms ========== */
+
+.form__group {
+  margin-bottom: var(--space-5);
+}
+
+.form__label {
+  display: block;
+  font: var(--text-label-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-grey-light);
+  margin-bottom: var(--space-2);
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+  width: 100%;
+  background: var(--surface-high);
+  color: var(--color-white-primary);
+  padding: 16px 20px;
+  font: var(--text-body-md);
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: all var(--transition-fast);
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+  outline: none;
+  border-color: var(--color-orange-primary);
+  box-shadow: 0 0 0 4px rgba(255, 117, 36, 0.1);
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--color-grey-dim);
+}
+
+/* ========== Focus States ========== */
+
+:focus-visible {
+  outline: 2px solid var(--color-orange-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-orange-primary);
+  outline-offset: 4px;
+}

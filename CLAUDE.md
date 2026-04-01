@@ -1,55 +1,116 @@
-# JR. Diesel - Diesel & Heavy Vehicle Mechanics
+# Project: alltorque.xyz
 
-## Site Overview
-- **Domain**: alltorque.xyz
-- **Business**: Diesel and heavy vehicle mechanics in Geelong, Australia
-- **Business Name**: "JR. Diesel"
+Business name: North Geelong Diesel
 
-## Design System
-- **Style**: Industrial
-- **Fonts**: Oswald (headings), Open Sans (body) - Google Fonts
-- **Colors**:
-  - Background dark: #1a1a1a
-  - Background darker: #111111
-  - Card background: #242424
-  - Accent (orange): #f59e0b
-  - Accent hover: #d97706
-  - Text: #ffffff
-  - Text muted: #9ca3af
-  - Border: #333333
+## Context
+This website is for North Geelong Diesel, a mechanic business specialising in:
+- heavy diesel vehicles
+- diesel servicing
+- fleet maintenance
+- diesel repairs
+- parts and replacement components
 
-## Services (in order)
-1. Heavy Vehicle Service
-2. Fleet Maintenance
-3. Diesel Engine Repair
-4. Petrol Vehicles
+The live domain/brand context for this project is:
+- Domain: alltorque.xyz
+- Project folder: /home/mark/web/alltorque
+- Assets folder: /home/mark/web/alltorque/assets
 
-## Infrastructure
-- **Nginx server**: 10.0.0.4
-- **NPM (Nginx Proxy Manager)**: 10.0.0.3
-- **Server path**: /var/www/sites/alltorque
-- **SSL**: Let's Encrypt via NPM
-- **Cloudflare**: Proxied (orange cloud), SSL mode Full (Strict)
-- **Access restriction**: Cloudflare IPs only (configured in NPM)
+## Business goals
+- Generate phone calls
+- Generate quote requests
+- Build trust with fleet managers, truck owners, and commercial operators
+- Clearly explain services
+- Present the business as dependable, capable, and professional
 
-## Deployment
-```bash
-scp -r /home/mark/web/alltorque/* mark@10.0.0.4:/var/www/sites/alltorque/
-```
+## Target audience
+- Fleet managers
+- Truck owners
+- Transport operators
+- Commercial vehicle owners
+- Local customers in Geelong and surrounding areas
 
-## DNS Records (Cloudflare)
-- alltorque.xyz → A record → [your public IP] (proxied)
-- www.alltorque.xyz → A record → [your public IP] (proxied)
+## Tone
+- Professional
+- Dependable
+- Practical
+- Strong
+- Clear and direct
+- Not flashy or overly salesy
 
-## Files
-- `index.html` - Main production page
-- `preview-industrial.html` - Original industrial style preview
-- `preview-bold.html` - Alternative bold style (not used)
-- `preview-professional.html` - Alternative professional style (not used)
+## Experience direction
+This site should not feel like a generic local business template.
 
-## TODO
-- Add testimonials section
-- Add contact form / booking section
-- Add location/map section
-- Add real workshop photos
-- Add mobile hamburger menu
+The goal is a unique, modern, premium industrial website with motion and visual personality.
+
+Desired qualities:
+- cinematic
+- interactive
+- bold
+- memorable
+- scroll-reactive
+- polished
+- high-end industrial
+
+Avoid:
+- generic service-box layouts
+- boring stock local-business design
+- overly corporate SaaS styling
+- cluttered motion
+- gimmicky animations that hurt usability
+
+Use motion intentionally:
+- reveal animations
+- layered scrolling effects
+- sticky sections
+- animated cards
+- section transitions
+- tasteful hover interactions
+- strong hero movement
+- subtle parallax where appropriate
+
+The website should feel custom and impressive, while still being clear and conversion-focused.
+
+## Visual direction
+- Premium industrial aesthetic
+- Clean modern layout
+- Strong typography
+- High contrast
+- Diesel / workshop / commercial vehicle feel
+- Trustworthy and conversion-focused
+
+## Required pages
+- Home
+- Services
+- Fleet Maintenance
+- Parts
+- About
+- Contact
+
+## Homepage priorities
+1. Clear value proposition
+2. Services overview
+3. Fleet maintenance capability
+4. Trust signals
+5. Strong contact CTA
+6. Local service relevance
+
+## UX requirements
+- Mobile-first
+- Sticky call button on mobile
+- Phone number visible in header
+- Clear quote/contact CTA
+- Fast loading
+- Accessible
+- Easy to scan
+
+## Asset rules
+- Put all generated and final image assets in /home/mark/web/alltorque/assets
+- Prepare the site to accept real generated imagery from Nano Banana Pro
+- Use placeholder references where final imagery is not yet available
+
+## Tool usage
+- Use Stitch for layout and design direction
+- Use 21st.dev for polished UI sections and component ideas
+- Use the UI UX Pro skill for UX, hierarchy, and conversion improvements
+- Include Nano Banana Pro in the workflow by generating image prompts and planning asset placement
+
